@@ -1,18 +1,18 @@
 {
-    "name": "kim/activity",
+    "name": "lethality/activity",
     "description": "Easily retrieve a list of users and guests that are online.",
     "keywords": [
         "laravel",
         "php",
         "online activity"
     ],
-    "homepage": "https://github.com/thomastkim/laravel-online-users",
+    "homepage": "https://github.com/lethality/laravel-online-users",
     "license": "MIT",
     "authors": [
         {
-            "name": "Thomas Kim",
-            "email": "thomas@thomastkim.com",
-            "homepage": "http://thomastkim.com"
+            "name": "Lee Holmes",
+            "email": "lee@lethality.me.uk",
+            "homepage": "http://l3th4l1ty.com"
         }
     ],
     "require": {
@@ -33,5 +33,15 @@
     "autoload-dev": {
         "classmap": ["tests"]
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lethality\\Activity\\ServiceProvider"
+            ],
+            "aliases": {
+                "Activity": "Lethality\\Activity\\Facade"
+            }
+        }
+    }
     "minimum-stability": "stable"
 }
